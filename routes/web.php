@@ -150,16 +150,16 @@ Route::get('/mahasiswa',function(){
     return view('kampus.mahasiswa',["mahasiswa01"=>"Maulana Sultansyah"]);
 });
 
-/*untuk data yang lebih banyak*/
-Route::get('/mahasiswa', function(){
-    return view('kampus.mahasiswa',
-    [
-        "mahasiswa01"=>"Indra Kenz",
-        "mahasiswa02"=>"Doni Salmanan",
-        "mahasiswa03"=>"Ulfi Rizkia",
-        "mahasiswa04"=>"Deliana Putri"
-    ]);
-});
+// /*untuk data yang lebih banyak*/
+// Route::get('/mahasiswa', function(){
+//     return view('kampus.mahasiswa',
+//     [
+//         "mahasiswa01"=>"Indra Kenz",
+//         "mahasiswa02"=>"Doni Salmanan",
+//         "mahasiswa03"=>"Ulfi Rizkia",
+//         "mahasiswa04"=>"Deliana Putri"
+//     ]);
+// });
 
 /*agar lebih rapi :
 Route::get('/mahasiswa', function(){
@@ -172,13 +172,54 @@ Route::get('/mahasiswa', function(){
     return view('kampus.mahasiswa', $arrMahasiswa);
 });*/
 
-/*nested array*/
-Route::get('/mahasiswa', function (){
-    $arrMahasiswa = ["Doni Sadikin", "Syadzwina Sahara", "Deliana Putri","Indra Kenz"];
-    return view('kampus.mahasiswa',['mahasiswa'=>$arrMahasiswa]);
+// /*nested array*/
+// Route::get('/mahasiswa', function (){
+//     $arrMahasiswa = ["Doni Sadikin", "Syadzwina Sahara", "Deliana Putri","Indra Kenz"];
+//     return view('kampus.mahasiswa',['mahasiswa'=>$arrMahasiswa]);
+// });
+
+// /*mengirim data view menggunakan method with*/
+// Route::get('/mahasiswa', function(){
+//     return view('kampus.mahasiswa')->with('mahasiswa01','Risa Lestari');
+// });  
+
+// /*tampilkan banyak data dengan looping*/
+// Route::get('/mahasiswa', function (){
+//     $arrMahasiswa = ["Doni Sadikin", "Syadzwina Sahara", "Deliana Putri","Indra Kenz"];
+//     return view('kampus.mahasiswa')->with('mahasiswa',$arrMahasiswa);
+// });
+
+// /*dipanggil beberapa kali dengan cara chaining (disambung)*/
+// Route::get('/mahasiswa',function(){
+//     return view('kampus.mahasiswa')->with('mahasiswa01','Doni Sadikin')->with(
+//         'mahasiswa02','Syadzwina Sahara')->with('mahasiswa03','Deliana Putri');
+// });
+
+// /*agar lebih rapi bisa juga ditulis*/
+// Route::get('/mahasiswa',function(){
+//     return view('kampus.mahasiswa')
+//     ->with('mahasiswa01','Doni Sadikin')
+//     ->with('mahasiswa02','Syadzwina Sahara')
+//     ->with('mahasiswa03','Deliana Putri');
+// });
+
+// with bisa juga ditulis langsung disambung
+// Route::get('/mahasiswa', function(){
+//     return view('kampus.mahasiswa')->withmahasiswa01('Khairur Almeer');
+// });  
+
+Route::get('/mahasiswa', function(){
+    $mahasiswa01 = 'Indra Kenz';
+    $mahasiswa02 = "Doni Salmanan";
+    $mahasiswa03 = "Ulfi Rizkia";
+    $mahasiswa04 = "Deliana Putri";
+return view('kampus.mahasiswa')->with(compact("mahasiswa01","mahasiswa02","mahasiswa03","mahasiswa04"));
 });
 
-/*mengirim data view menggunakan method with*/
-Route::get('/mahasiswa', function(){
-    return view('kampus.mahasiswa')->with('mahasiswa01','Risa Lestari');
+Route::get('/mahasiswa', function() {
+    $mahasiswa01 = "Indra Kenz";
+    $mahasiswa02 = "Doni Salmanan";
+    $mahasiswa03 = "Ulfi Rizkia";
+    $mahasiswa04 = "Deliana Putri";
+return view('kampus.mahasiswa')->with(compact("mahasiswa01","mahasiswa02","mahasiswa03","mahasiswa04"));    
 });

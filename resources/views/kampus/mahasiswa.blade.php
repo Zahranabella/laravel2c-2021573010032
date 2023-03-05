@@ -9,7 +9,17 @@
 <body>
     <h1>Daftar Mahasiswa</h1>
     <ol>
-        <li><?php echo $mahasiswa01;?></li>
+        {{-- <li>Fahrul Sadikin</li>
+        <li>Khairul Khazil</li>
+        <li>Anisa Salwa</li>
+        <li>Sepkha Wulan Dari</li> --}}
+
+        {{-- <li><?php echo $mahasiswa01;?></li> --}}
+
+        <li><?php echo $mahasiswa01; ?></li>
+        <li><?php echo $mahasiswa02; ?></li>
+        <li><?php echo $mahasiswa03 ?></li>
+        <li><?php echo $mahasiswa04; ?></li>
 
         {{-- <li><?php echo $mahasiswa[0]; ?></li>
         <li><?php echo $mahasiswa[1]; ?></li>
@@ -19,7 +29,7 @@
         {{-- cara lebih singkat :
         <?php 
         foreach ($mahasiswa as $nama) {
-            echo "<li>$nama </li>"
+            echo "<li>$nama</li>"
         }
         ?> --}}
     </ol>
