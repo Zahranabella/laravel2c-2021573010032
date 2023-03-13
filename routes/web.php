@@ -136,19 +136,19 @@ Route::get('/mahasiswa', function(){
     return View::make('mahasiswa');
 });
 
-/*Membuat struktur folder view*/
-Route::get('/mahasiswa', function(){
-    return View('kampus.mahasiswa');
-});
-/*sama aja jika ditulis seperti ini
-Route::get('/mahasiswa', function(){
-    return View('kampus/mahasiswa');
-});*/
+// /*Membuat struktur folder view*/
+// Route::get('/mahasiswa', function(){
+//     return View('kampus.mahasiswa');
+// });
+// /*sama aja jika ditulis seperti ini
+// Route::get('/mahasiswa', function(){
+//     return View('kampus/mahasiswa');
+// });*/
 
-/*mengirim data ke view sebagai argumaen*/
-Route::get('/mahasiswa',function(){
-    return view('kampus.mahasiswa',["mahasiswa01"=>"Maulana Sultansyah"]);
-});
+// /*mengirim data ke view sebagai argumaen*/
+// Route::get('/mahasiswa',function(){
+//     return view('kampus.mahasiswa',["mahasiswa01"=>"Maulana Sultansyah"]);
+// });
 
 // /*untuk data yang lebih banyak*/
 // Route::get('/mahasiswa', function(){
@@ -208,18 +208,44 @@ Route::get('/mahasiswa', function(){
 //     return view('kampus.mahasiswa')->withmahasiswa01('Khairur Almeer');
 // });  
 
+// Route::get('/mahasiswa', function(){
+//     $mahasiswa01 = 'Indra Kenz';
+//     $mahasiswa02 = "Doni Salmanan";
+//     $mahasiswa03 = "Ulfi Rizkia";
+//     $mahasiswa04 = "Deliana Putri";
+// return view('kampus.mahasiswa')->with(compact("mahasiswa01","mahasiswa02","mahasiswa03","mahasiswa04"));
+// });
+
+// Route::get('/mahasiswa', function() {
+//     $mahasiswa01 = "Indra Kenz";
+//     $mahasiswa02 = "Doni Salmanan";
+//     $mahasiswa03 = "Ulfi Rizkia";
+//     $mahasiswa04 = "Deliana Putri";
+// return view('kampus.mahasiswa')->with(compact("mahasiswa01","mahasiswa02","mahasiswa03","mahasiswa04"));    
+// });
+
+/*BLADE TEMPLATE ENGINE*/
+/*menampilkan data*/
 Route::get('/mahasiswa', function(){
-    $mahasiswa01 = 'Indra Kenz';
-    $mahasiswa02 = "Doni Salmanan";
-    $mahasiswa03 = "Ulfi Rizkia";
-    $mahasiswa04 = "Deliana Putri";
-return view('kampus.mahasiswa')->with(compact("mahasiswa01","mahasiswa02","mahasiswa03","mahasiswa04"));
+    $nama = 'John Paijo Simatupang';
+    $nilai = 75;
+    return view('mahasiswa', compact('nama','nilai'));
 });
 
-Route::get('/mahasiswa', function() {
-    $mahasiswa01 = "Indra Kenz";
-    $mahasiswa02 = "Doni Salmanan";
-    $mahasiswa03 = "Ulfi Rizkia";
-    $mahasiswa04 = "Deliana Putri";
-return view('kampus.mahasiswa')->with(compact("mahasiswa01","mahasiswa02","mahasiswa03","mahasiswa04"));    
+Route::get('/mahasiswa', function(){
+    $nama ='<u>Elon Musk Batubara</u>';
+    $nilai= 75;
+    return view('mahasiswa', compact('nama','nilai'));
+});
+
+Route::get('/mahasiswa', function(){
+    $nama ='Vladimir Putin Harahap';
+    $nilai= [80,64,30,76,95];
+    return view('mahasiswa', compact('nama','nilai'));
+});
+
+Route::get('/mahasiswa', function(){
+    $nama ='Tya Kirana Putri';
+    $nilai= [80,64,30,76,95];
+    return view('mahasiswa', compact('nama','nilai'));
 });

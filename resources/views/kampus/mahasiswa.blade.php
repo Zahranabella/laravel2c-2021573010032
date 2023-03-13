@@ -16,10 +16,10 @@
 
         {{-- <li><?php echo $mahasiswa01;?></li> --}}
 
-        <li><?php echo $mahasiswa01; ?></li>
+        {{-- <li><?php echo $mahasiswa01; ?></li>
         <li><?php echo $mahasiswa02; ?></li>
         <li><?php echo $mahasiswa03 ?></li>
-        <li><?php echo $mahasiswa04; ?></li>
+        <li><?php echo $mahasiswa04; ?></li> --}}
 
         {{-- <li><?php echo $mahasiswa[0]; ?></li>
         <li><?php echo $mahasiswa[1]; ?></li>
