@@ -25,7 +25,7 @@
     </nav> --}}
 {{-- @include('layout.header',['title'=>'Data Mahasiswa']) --}}
 @extends('layout.master')
-@section('title','Data Mahasiswa')
+{{-- @section('title','Data Mahasiswa') --}}
 @section('manuMahasiswa','active')
 
 @section('content')
