@@ -26,6 +26,7 @@
 {{-- @include('layout.header',['title'=>'Data Dosen']) --}}
 @extends('layout.master')
 @section('title','Data Dosen')
+@section('manuDosen','active')
     
 @section('content')
 <div class="container text-center mt-3 p-4 bg-white">

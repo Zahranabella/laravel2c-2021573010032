@@ -26,7 +26,8 @@
 {{-- @include('layout.header',['title'=>'Data Mahasiswa']) --}}
 @extends('layout.master')
 @section('title','Data Mahasiswa')
-    
+@section('manuMahasiswa','active')
+
 @section('content')
     <div class="container text-center mt-3 p-4 bg-white">
         <h1 class="mb-3">Data Mahasiswa</h1>
@@ -43,7 +44,6 @@
         </div>
     </div>
 @endsection
-<p>Sebuah Paragraf</p>
 {{-- @include('layout.footer') --}}
     {{-- <footer class="bg-dark py-4 text-white mt-4">
         <div class="container">
