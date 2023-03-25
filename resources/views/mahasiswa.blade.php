@@ -43,6 +43,7 @@
         </div>
     </div>
 @endsection
+<p>Sebuah Paragraf</p>
 {{-- @include('layout.footer') --}}
     {{-- <footer class="bg-dark py-4 text-white mt-4">
         <div class="container">
