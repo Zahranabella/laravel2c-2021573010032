@@ -258,7 +258,7 @@ Route::get('mahasiswa', function(){
 
 Route::get('dosen', function(){
     $arrDosen = ["Maya Fitriani, M.M.", "Prof. SIlvia Nst, M.Farm","Dr. Umar Agustinus","Dr. Syahrial, M.Kom."];
-    return view('dosen')->with('mahasiswa', $arrDosen);
+    return view('dosen')->with('dosen', $arrDosen);
 });
 
 Route::get('gallery', function(){
