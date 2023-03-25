@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,8 +22,8 @@
                 </li>
             </ul>
         </div>
-    </nav>
-
+    </nav> --}}
+@include('layout.header')
     <div class="container text-center mt-3 p-4 bg-white">
         <h1 class="mb-3">Data Mahasiswa</h1>
         <div class="row">
@@ -38,11 +38,12 @@
                     </div>
         </div>
     </div>
-    <footer class="bg-dark py-4 text-white mt-4">
+@include('layout.footer')
+    {{-- <footer class="bg-dark py-4 text-white mt-4">
         <div class="container">
             Sistem Informasi Mahasiswa | Copyright © {{ date("Y")}} Teknik Informatika
         </div>
     </footer>
 
 </body>
-</html>
+</html> --}}
