@@ -224,28 +224,43 @@ Route::get('/mahasiswa', function(){
 // return view('kampus.mahasiswa')->with(compact("mahasiswa01","mahasiswa02","mahasiswa03","mahasiswa04"));    
 // });
 
-/*BLADE TEMPLATE ENGINE*/
-/*menampilkan data*/
-Route::get('/mahasiswa', function(){
-    $nama = 'John Paijo Simatupang';
-    $nilai = 75;
-    return view('mahasiswa', compact('nama','nilai'));
+// /*BLADE TEMPLATE ENGINE*/
+// /*menampilkan data*/
+// Route::get('/mahasiswa', function(){
+//     $nama = 'John Paijo Simatupang';
+//     $nilai = 75;
+//     return view('mahasiswa', compact('nama','nilai'));
+// });
+
+// Route::get('/mahasiswa', function(){
+//     $nama ='<u>Elon Musk Batubara</u>';
+//     $nilai= 75;
+//     return view('mahasiswa', compact('nama','nilai'));
+// });
+
+// Route::get('/mahasiswa', function(){
+//     $nama ='Vladimir Putin Harahap';
+//     $nilai= [80,64,30,76,95];
+//     return view('mahasiswa', compact('nama','nilai'));
+// });
+
+// Route::get('/mahasiswa', function(){
+//     $nama ='Tya Kirana Putri';
+//     $nilai= [80,64,30,76,95];
+//     return view('mahasiswa', compact('nama','nilai'));
+// });
+
+/*LAYOUT BLADE TEMPLATE*/
+Route::get('mahasiswa', function(){
+    $arrMahasiswa = ["Luhut Panjaitan", "Jokowi","Vladimir Putin","Lisa Permata"];
+    return view('mahasiswa')->with('mahasiswa', $arrMahasiswa);
 });
 
-Route::get('/mahasiswa', function(){
-    $nama ='<u>Elon Musk Batubara</u>';
-    $nilai= 75;
-    return view('mahasiswa', compact('nama','nilai'));
+Route::get('dosen', function(){
+    $arrDosen = ["Maya Fitriani, M.M.", "Prof. SIlvia Nst, M.Farm","Dr. Umar Agustinus","Dr. Syahrial, M.Kom."];
+    return view('dosen')->with('mahasiswa', $arrDosen);
 });
 
-Route::get('/mahasiswa', function(){
-    $nama ='Vladimir Putin Harahap';
-    $nilai= [80,64,30,76,95];
-    return view('mahasiswa', compact('nama','nilai'));
-});
-
-Route::get('/mahasiswa', function(){
-    $nama ='Tya Kirana Putri';
-    $nilai= [80,64,30,76,95];
-    return view('mahasiswa', compact('nama','nilai'));
+Route::get('gallery', function(){
+    return view('gallery');
 });
