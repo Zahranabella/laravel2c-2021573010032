@@ -12,14 +12,40 @@
     <h1 class="mb-3">Halaman Admin</h1>
     <div class="row">
         <div class="col-12">
-            <div class="alert alert-warning alert-dismissible fade show">
+            @component('layout.alert',['class'=>'warning','judul'=>'Peringatan'])
+            {{-- @slot('class')
+                warning
+            @endslot
+            @slot('judul')
+                Peringatan
+            @endslot --}}
+            100 data mahasiswa perlu diperbaiki
+            @endcomponent
+
+            @component('layout.alert',['class'=>'danger','judul'=>'Awas'])
+            {{-- @slot('class')
+                danger
+            @endslot
+            @slot('judul')
+                Awas
+            @endslot --}}
+            Hari ini deadline laporan perjalanan dinas!
+            @endcomponent
+
+            @component('layout.alert',['class'=>'success','judul'=>'Kabar Baik'])
+            {{-- @slot('class')
+                success
+            @endslot --}}
+                Bulan depan cuti panjang...
+            @endcomponent
+            {{-- <div class="alert alert-warning alert-dismissible fade show">
                 100 data mahasiswa perlu diperbaiki
                 <button type="button" class="btn-close" data-bs-dissmiss="alert"></button>
             </div>
             <div class="alert alert-danger alert-dismissible fade show">
                 Hari ini deadline laporan perjalanan dinas!
                 <button type="button" class="btn-close" data-bs-dissmiss="alert"></button>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
