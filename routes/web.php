@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -284,3 +285,5 @@ Route::get('/',[App\Http\Controllers\Admin\PageController::class,'index']);
 Route::get('/',[App\Http\Controllers\Admin\PageController::class,'tampil']);
 
 Route::get('/coba-facade',[PageController::class,'cobaFacade']);
+
+Route::get('/coba-class',[PageController::class,'cobaClass']);
