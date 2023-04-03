@@ -251,20 +251,36 @@ Route::get('/mahasiswa', function(){
 // });
 
 /*LAYOUT BLADE TEMPLATE*/
-Route::get('mahasiswa', function(){
-    $arrMahasiswa = ["Luhut Panjaitan", "Jokowi","Vladimir Putin","Lisa Permata"];
-    return view('mahasiswa')->with('mahasiswa', $arrMahasiswa);
-});
+// Route::get('mahasiswa', function(){
+//     $arrMahasiswa = ["Luhut Panjaitan", "Jokowi","Vladimir Putin","Lisa Permata"];
+//     return view('mahasiswa')->with('mahasiswa', $arrMahasiswa);
+// });
 
-Route::get('dosen', function(){
-    $arrDosen = ["Maya Fitriani, M.M.", "Prof. SIlvia Nst, M.Farm","Dr. Umar Agustinus","Dr. Syahrial, M.Kom."];
-    return view('dosen')->with('dosen', $arrDosen);
-});
+// Route::get('dosen', function(){
+//     $arrDosen = ["Maya Fitriani, M.M.", "Prof. SIlvia Nst, M.Farm","Dr. Umar Agustinus","Dr. Syahrial, M.Kom."];
+//     return view('dosen')->with('dosen', $arrDosen);
+// });
 
-Route::get('gallery', function(){
-    return view('gallery');
-});
+// Route::get('gallery', function(){
+//     return view('gallery');
+// });
 
-Route::get('admin',function(){
-    return view('admin');
-});
+// Route::get('admin',function(){
+//     return view('admin');
+// });
+
+Route::get('/',[App\Http\Controllers\PageController::class,'index']);
+Route::get('/mahasiswa',[App\Http\Controllers\PageController::class,'tampil']);
+
+// use App\Http\Controllers\PageController;
+// Route::get('/',[PageController::class,'index']);
+// Route::get('/mahasiswa',[PageController::class,'tampil']);
+
+// use App\Http\Controllers\Admin\PageController;
+// Route::get('/',[PageController::class,'index']);
+// Route::get('/mahasiswa',[PageController::class,'tampil']);
+
+Route::get('/',[App\Http\Controllers\Admin\PageController::class,'index']);
+Route::get('/',[App\Http\Controllers\Admin\PageController::class,'tampil']);
+
+Route::get('/coba-facade',[PageController::class,'cobaFacade']);
